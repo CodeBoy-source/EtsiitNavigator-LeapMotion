@@ -1,10 +1,12 @@
 import com.leapmotion.leap.Controller;
+import com.leapmotion.leap.Leap;
+
 import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-       DisplayImage displayImage = new DisplayImage();
-        LeapListener listener = new LeapListener(displayImage);
+    public static void main(String[] args) {
+        // Create a listener and controller
+        LeapListener listener = new LeapListener();
         Controller controller = new Controller();
 
         // Have the sample listener receive events from the controller
@@ -21,5 +23,4 @@ public class Main {
         // Remove the sample listener when done
         controller.removeListener(listener);
     }
-
 }
